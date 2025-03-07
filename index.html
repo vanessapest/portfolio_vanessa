@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <script src="navigation.js" defer></script>
+    </head>
+    <body>
+        <header class="primary-header flex">
+            <div>
+                <img src="assets/images/logo.png.webp" alt="space tourism logo" class="logo">
+            </div>
+            
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+            </button>
+
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+                    <li class="active">
+                        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html">
+                            <span aria-hidden="true"></span>Home
+                        </a>
+                    <li>
+                        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html">
+                            <span aria-hidden="true"></span>Destination
+                        </a>
+                    <li>
+                        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html">
+                            <span aria-hidden="true"></span>Crew
+                        </a>
+                    <li>
+                        <a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html">
+                            <span aria-hidden="true"></span>Technology
+                        </a>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
