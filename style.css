@@ -2,11 +2,15 @@
 *,
 *::before,
 *::after {
-    box-sizing:border-box;
+    box-sizing: border-box;
 }
 
 /* set up the body */
 body {
+    font-family: Syne, Helvetica Neue;
+    font-size: medium;
+    background-color: white;
+
     display: grid;
     grid-template-rows: min-content 1fr;
 
@@ -39,10 +43,45 @@ picture {
     border: 0;
 }
 
+.content {
+    text-align: center;  /* Center align the text */
+    margin-top: 6rem;   /* Adjust spacing from the navbar */
+    color: black;
+}
+
+.headline {
+    font-size: 5rem;  
+    text-transform: uppercase;
+
+}
+
+.description {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+}
+
+.email {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.email a {
+    color: black;  
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.email a:hover {
+    color: #970707;
+}
+
+
 /* primary header */
 
 .logo {
-    width: 80px;
+    width: 100px;
     margin: 2rem;
 }
 
@@ -59,10 +98,18 @@ picture {
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-right: 2rem;
 }
 
 .primary-navigation a {
     text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+.primary-navigation a:hover {
+    color: #970707; 
 }
 
 @media (max-width: 35em) {
@@ -71,7 +118,7 @@ picture {
 
         position: fixed;
         z-index: 1000;
-        inset: 0 0 0 30%;
+        inset: 0 0 0 40%;
 
         flex-direction: column;
         padding: min(30vh, 10rem) 2rem;
@@ -79,17 +126,20 @@ picture {
         transform: translateX(100%);
         transition: transform 350ms ease-out;
 
-        background: steelblue;
-        /* backgound: hsl(0, 0%, 0% / 0.5);
-        for a semi clear back background */
+        background: hsl(0, 0%, 0% / 0.5);
+        /* for a semi clear back background */
     }
 
-    /* @supports (backdrop-filter: blur(rem)) {
+    @supports (backdrop-filter: blur(rem)) {
        .primary-navigation {
             background: hsl(0, 0%, 100% / 0.1);
             backdrop-filter: blur(1rem);
        }
-    } */
+    } 
+
+    .primary-navigation a:hover {
+        color: #970707; 
+    }
 
     .primary-navigation[data-visible="true"] {
         transform: translateX(0);
